@@ -1,21 +1,28 @@
 # warsawjs-workshop-26-my-photos
 
-##Zagadnienia
+## Zagadnienia
 
-1. Tablice
+### 1. Tablice
 
-   - dodawanie, usuwanie i zmiana obiektów w tablicy
-   - iterowanie, mapowanie
+- dodawanie, usuwanie i zmiana obiektów w tablicy
+- iterowanie, mapowanie
 
-2. Klasy
+### 2. Klasy
 
-   - contructor
-   - metody
-   - pola
-   - get/set
+- contructor
+- metody
+- pola
+- get/set
+- wartości domyślne
 
-3. FileReader API
+### 3. Pobieranie obrazów z Flickr API
 
-   - upload pliku, wyświetlenie go i dodanie do listy
+### 4. Lightbox
 
-4. Carousela
+### 5. FileReader API
+
+- upload pliku, wyświetlenie go i dodanie do listy
+
+### 6. Formularz dodawania pliku
+
+### 7. Carousela

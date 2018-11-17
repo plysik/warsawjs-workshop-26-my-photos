@@ -4,17 +4,22 @@ let fetchCallback = null;
 function randomColor() {
   return Math.floor(Math.random() * 16777215).toString(16);
 }
+
 function fetchLocalImages() {
   let images = localData;
   images.map(item => {
-    let image = new ImageClass({
-      url: item.url,
-      // url: item.url + "/" + randomColor(),
-      title: item.title,
-      author: item.author,
-      dateAdded: new Date(item.published)
-    });
-    imageList.addImage(image);
+    allImages.push(item);
+
+    //! http://placeskull.com/
+
+    // let image = new ImageClass({
+    //   url: item.url,
+    //   // url: item.url + "/" + randomColor(),
+    //   title: item.title,
+    //   author: item.author,
+    //   dateAdded: new Date(item.published)
+    // });
+    // imageList.addImage(image);
   });
 }
 
