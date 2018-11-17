@@ -19,10 +19,7 @@ class FileForm {
           ""}'/>
         <label for="author">Autor</label>
         <input id='author' name='author' type='text' value='${this.image
-          .author || ""}'/>
-        <label for="category">Kategoria</label>
-        <input id='category' name='category' type='text' value='${this.image
-          .category || ""}'/>
+          .author || ""}'/>        
         <label for="description">Opis</label>
         <textarea id='description' name='description' type='text'>${this.image
           .description || ""}</textarea>
@@ -47,8 +44,7 @@ class FileForm {
             url: e.target.result,
             author: data.get("author"),
             title: data.get("title"),
-            description: data.get("description"),
-            category: data.get("category") || "uploaded"
+            description: data.get("description")
           });
           let index = imageList.images.indexOf(image);
           if (index === -1) imageList.addImage(image);

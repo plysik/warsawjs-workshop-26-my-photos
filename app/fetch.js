@@ -1,5 +1,25 @@
 let allImages = [];
-function fetchImages(tags = ["flowers"], mode = "ANY") {
+let fetchCallback = null;
+
+function randomColor() {
+  return Math.floor(Math.random() * 16777215).toString(16);
+}
+function fetchLocalImages() {
+  let images = localData;
+  images.map(item => {
+    let image = new ImageClass({
+      url: item.url,
+      // url: item.url + "/" + randomColor(),
+      title: item.title,
+      author: item.author,
+      dateAdded: new Date(item.published)
+    });
+    imageList.addImage(image);
+  });
+}
+
+function fetchImages({ tags = ["flowers"], mode = "ALL", callback }) {
+  fetchCallback = callback;
   const url = `https://api.flickr.com/services/feeds/photos_public.gne?tagmode=${mode}&tags=${tags.join(
     ","
   )}&format=json`;
@@ -24,14 +44,15 @@ function fetchImages(tags = ["flowers"], mode = "ANY") {
   //   return data;
 }
 function jsonFlickrFeed(data) {
+  debugger;
   data.items.map(item => {
     let image = new ImageClass({
       url: item.media.m,
       title: item.title,
       author: item.author,
-      category: null,
       dateAdded: new Date(item.published)
     });
     imageList.addImage(image);
   });
+  fetchCallback();
 }

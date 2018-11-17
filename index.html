@@ -7,16 +7,33 @@
     <title>warsawjs-workshop-26-my-photos</title>
     <link rel="stylesheet" href="app/main.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script src="app/assets/images.js"></script>
     <script src="app/fetch.js"></script>
     <script src="app/models/Image.js"></script>
     <script src="app/models/FileUploader.js"></script>
     <script src="app/models/FileForm.js"></script>
+    <script src="app/models/Carousel.js"></script>
   </head>
   <body>
-    <div id="new-file-form"></div>
-    <div id="new-file"></div>
-    <div class="lightbox"></div>
-    <ul class="images-list"></ul>
+    <div>
+      <div class="l w70">
+        <div class="l w70">
+          <header>
+            <h1>Witajcie na warsztatach z podstaw języka Javascript</h1>
+            <p>
+              Proszę o utworzenie repozytorium na Waszym koncie Github.
+              Repozytorium powinno mieć nazwę:
+            </p>
+            <h2>warsawjs-workshop-26-my-photos</h2>
+          </header>
+        </div>
+        <div class="r w30" id="new-file-form"></div>
+      </div>
+      <div class="r w30 lightbox"></div>
+    </div>
+    <div class="clear-fix"></div>
+    <div><ul class="images-list"></ul></div>
+    <div class="carousel"></div>
   </body>
   <script src="app/main.js"></script>
 </html>

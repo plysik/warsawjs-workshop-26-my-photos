@@ -21,8 +21,7 @@ class FileUploader {
           const img = new ImageClass({
             url: e.target.result,
             title: file.name,
-            author: "me",
-            category: "uploaded"
+            author: "me"
           });
           imageList.addImage(img);
         }.bind(this, file)

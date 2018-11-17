@@ -3,14 +3,12 @@ class ImageClass {
     url,
     title,
     author,
-    category,
     dateAdded = new Date(),
     isFavourite = false
   } = {}) {
     this.url = url;
     this.title = title;
     this.author = author;
-    this.category = category;
     this.dateAdded = dateAdded;
     this.isFavourite = isFavourite;
   }

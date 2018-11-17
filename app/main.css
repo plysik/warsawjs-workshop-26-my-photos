@@ -1,12 +1,25 @@
-.lightbox {
+body {
+  margin: 0;
+}
+header {
+  padding: 5px;
+  box-sizing: border-box;
+}
+.l {
   float: left;
 }
-.lightbox img {
-  width: 400px;
-  height: auto;
-}
-.form {
+.r {
   float: right;
+}
+
+.w70 {
+  width: 70%;
+}
+.w30 {
+  width: 30%;
+}
+
+.form {
   max-width: 400px;
 }
 .form label,
@@ -14,12 +27,30 @@
   display: block;
   margin-top: 5px;
 }
-
+.form label,
+.form input,
+.form textarea {
+  width: 100%;
+}
+.lightbox {
+  padding: 5px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.lightbox img {
+  max-width: 100%;
+  width: auto;
+  max-height: 200px;
+}
+.clear-fix {
+  float: none;
+  clear: both;
+}
 ul {
   display: block;
-  float: left;
   width: 100%;
-  padding: 0;
+  padding: 0 5px;
+  box-sizing: border-box;
 }
 ul li {
   max-width: 200px;
