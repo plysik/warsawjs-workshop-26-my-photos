@@ -14,6 +14,7 @@
 - pola
 - get/set
 - wartości domyślne
+- template stringi
 
 ### 3. Pobieranie obrazów z Flickr API
 
