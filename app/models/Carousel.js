@@ -18,18 +18,22 @@ class Carousel {
       this.index++;
       this.imgEl.src = this.images[this.index].src;
       this.radios[this.index].checked = true;
-    }, 2000);
+      if (this.index === this.images.length - 1) this.index = -1;
+    }, 1000);
   }
+
   getImages() {
     this.images = Array.from(
       document.querySelectorAll(`${this.sourceSelector} img`)
     );
   }
+
   preRender(html) {
     const tempParent = document.createElement("div");
     tempParent.innerHTML = html;
     return tempParent.firstChild;
   }
+
   renderRadios() {
     const html = this.images
       .map(image => {

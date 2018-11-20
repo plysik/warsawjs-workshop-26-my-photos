@@ -8,18 +8,18 @@ function randomColor() {
 function fetchLocalImages() {
   let images = localData;
   images.map(item => {
-    allImages.push(item);
+    // allImages.push(item);
 
-    //! http://placeskull.com/
+    // ! http://placeskull.com/
 
-    // let image = new ImageClass({
-    //   url: item.url,
-    //   // url: item.url + "/" + randomColor(),
-    //   title: item.title,
-    //   author: item.author,
-    //   dateAdded: new Date(item.published)
-    // });
-    // imageList.addImage(image);
+    let image = new ImageClass({
+      // url: item.url,
+      url: item.url + "/" + randomColor(),
+      title: item.title,
+      author: item.author,
+      dateAdded: new Date(item.published)
+    });
+    imageList.addImage(image);
   });
 }
 
@@ -49,7 +49,6 @@ function fetchImages({ tags = ["flowers"], mode = "ALL", callback }) {
   //   return data;
 }
 function jsonFlickrFeed(data) {
-  debugger;
   data.items.map(item => {
     let image = new ImageClass({
       url: item.media.m,
